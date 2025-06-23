@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>On&On Weddings & Events</title>
+  <link rel="icon" type="image/png" href="OnOn.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="main-nav">
+    <div class="logo">On&On</div>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('videos')">Videos</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="tab-section active">
+
+    <header class="hero">
+      <div class="hero-content">
+        <h1>On&On Weddings & Events</h1>
+        <p>From your first dance to your final send-off — let’s create a day that looks, feels, and sounds unforgettable.</p>
+        <a href="#" class="btn-primary" onclick="showSection('contact')">Lock in 2025 Pricing</a>
+      </div>
+    </header>
+
+    <div class="home-subsection-wrapper">
+      <section class="section home-subsection">
+        <h2>Our Services</h2>
+        <div class="card-grid">
+          <div class="card">
+            <h3>🎧 DJ & Audio Services</h3>
+            <p>Custom soundtracks, ceremony mics, and reception-ready audio for every moment.</p>
+          </div>
+          <div class="card">
+            <h3>📸 Photography</h3>
+            <p>Capture every smile, tear, and candid laugh with timeless images you'll treasure.</p>
+          </div>
+          <div class="card">
+            <h3>🎥 Videography</h3>
+            <p>Relive your wedding day through cinematic, story-driven video coverage.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="home-subsection-wrapper">
+      <section class="section home-subsection">
+        <h2>About Us</h2>
+        <p>On&On Weddings & Events is officially here to bring your wedding vision to life! Our team is dedicated to making your big day seamless, emotional, and unforgettable.</p>
+        <p><strong>📣 2025 Booking Deal:</strong> Every wedding booked for 2025 (whether now or later this year) will be locked in at current pricing — no matter how far out your date is.</p>
+        <p><strong>⚠️ 2026 prices will increase</strong> as we grow, upgrade our gear, and expand our team — so now is the best time to secure your date!</p>
+      </section>
+    </div>
+
+  </section>
+
+
+  <section id="videos" class="section tab-section">
+    <h2>Video Showcase</h2>
+    <p>Take a look at some highlights from past weddings and events we've brought to life.</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+      <iframe width="300" height="170" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Wedding Video" frameborder="0" allowfullscreen></iframe>
+      <iframe width="300" height="170" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Event Recap" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="section tab-section">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:hello@onandonweddings.com">hello@onandonweddings.com</a></p>
+    <p>Phone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+    <p>Let’s make your celebration one to remember.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 On&On Weddings & Events | Creating Unforgettable Celebrations</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.tab-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
