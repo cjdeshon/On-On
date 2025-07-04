@@ -1,6 +1,6 @@
 
 :root {
-  --bg: #fdf9f5;
+  --bg: #e9e0d8;
   --text: #2c2c2c;
   --accent: #a97c50;
   --light: #ffffff;
@@ -176,6 +176,48 @@ h1, h2, h3 {
   max-width: 280px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.video-section {
+  background: url('images/gallery1.jpg') no-repeat center center / cover;
+  color: rgb(219, 214, 204);
+  position: relative;
+}
+
+.video-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.video-section h2,
+.video-section p {
+  position: relative;
+  z-index: 1;
+}
+
+.video-gallery {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.video-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .contact-form {
