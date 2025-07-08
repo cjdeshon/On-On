@@ -10,67 +10,130 @@
 </head>
 <body>
 
-  <nav class="main-nav">
-    <div class="logo">On&On</div>
-    <ul>
-      <li><a href="#" onclick="showSection('home')">Home</a></li>
-      <li><a href="#" onclick="showSection('videos')">Videos</a></li>
-      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- Persistent Header -->
+  <header class="hero-clean">
+    <div class="hero-inner">
+      <h1 class="site-title">On&On Weddings & Events</h1>
+      <nav class="main-nav-clean">
+        <ul>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" onclick="showSection('videos')">Portfolio</a></li>
+          <li><a href="#" onclick="showSection('reviews')">Reviews</a></li>
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <!-- Home Section -->
   <section id="home" class="tab-section active">
-
-    <header class="hero">
-      <div class="hero-content">
-        <h1>On&On Weddings & Events</h1>
-        <p>From your first dance to your final send-off — let’s create a day that looks, feels, and sounds unforgettable.</p>
-        <a href="#" class="btn-primary" onclick="showSection('contact')">Lock in 2025 Pricing</a>
-      </div>
-    </header>
-
     <div class="home-subsection-wrapper">
       <section class="section home-subsection">
         <h2>Our Services</h2>
         <div class="card-grid">
           <div class="card">
-            <h3>🎧 DJ & Audio Services</h3>
-            <p>Custom soundtracks, ceremony mics, and reception-ready audio for every moment.</p>
+            <div class="icon-circle">🎧</div>
+            <div class="card-content">
+              <h3>DJ & Audio Services</h3>
+              <p>Custom soundtracks, ceremony mics, and reception-ready audio for every moment.</p>
+            </div>
           </div>
+
           <div class="card">
-            <h3>📸 Photography</h3>
-            <p>Capture every smile, tear, and candid laugh with timeless images you'll treasure.</p>
+            <div class="icon-circle">📸</div>
+            <div class="card-content">
+              <h3>Photography</h3>
+              <p>Capture every smile, tear, and candid laugh with timeless images you'll treasure.</p>
+            </div>
           </div>
+
           <div class="card">
-            <h3>🎥 Videography</h3>
-            <p>Relive your wedding day through cinematic, story-driven video coverage.</p>
+            <div class="icon-circle">🎥</div>
+            <div class="card-content">
+              <h3>Videography</h3>
+              <p>Relive your wedding day through cinematic, story-driven video coverage.</p>
+            </div>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="home-subsection-wrapper">
-      <section class="section home-subsection">
-        <h2>About Us</h2>
-        <p>On&On Weddings & Events is officially here to bring your wedding vision to life! Our team is dedicated to making your big day seamless, emotional, and unforgettable.</p>
-        <p><strong>📣 2025 Booking Deal:</strong> Every wedding booked for 2025 (whether now or later this year) will be locked in at current pricing — no matter how far out your date is.</p>
-        <p><strong>⚠️ 2026 prices will increase</strong> as we grow, upgrade our gear, and expand our team — so now is the best time to secure your date!</p>
+    <!-- Our Services -->
+    <section class="section services-heading">
+      <h2>Our Services</h2>
+    </section>
+
+    <div class="service-stack">
+      <!-- DJ & Audio Services -->
+      <section class="split-service-section">
+        <div class="service-image" style="background-image: url('images/dj.jpg');"></div>
+        <div class="service-content dj-layout">
+          <h2>DJ & Audio Services</h2>
+          <div class="spacer-md"></div>
+          <p>From ceremony to last call, our DJs read the room, mix live, and make every transition seamless. We keep the energy flowing and the dance floor packed.</p>
+          <div class="spacer-lg"></div>
+          <ul class="service-features fade-in-bullets">
+            <li style="--delay: 0s;"><span class="icon">🎶</span> Custom playlists tailored to your vibe</li>
+            <li style="--delay: 0.2s;"><span class="icon">🎤</span> Ceremony + reception mic setup</li>
+            <li style="--delay: 0.4s;"><span class="icon">🔊</span> Premium audio & lighting gear</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Photography -->
+      <section class="split-service-section">
+        <div class="service-content photo-layout">
+          <h2>Photography</h2>
+          <div class="spacer-md"></div>
+          <p>Our photographers capture every moment with style, grace, and emotion—from teary vows to joyful dances and every heartfelt detail in between.</p>
+          <div class="spacer-lg"></div>
+          <div class="gallery-button-wrapper">
+            <div class="gallery-circle" style="background-image: url('images/gallery1.jpg');"></div>
+            <a href="#gallery" class="btn-gallery">See Gallery</a>
+          </div>
+        </div>
+        <div class="service-image" style="background-image: url('images/photography.jpg');"></div>
+      </section>
+
+      <!-- Videography -->
+      <section class="split-service-section">
+        <div class="service-image" style="background-image: url('images/video.jpg');"></div>
+        <div class="service-content video-layout">
+          <h2>Videography</h2>
+          <div class="spacer-md"></div>
+          <p>Our videographers craft cinematic, story-driven films that preserve your celebration in vivid detail and emotion.</p>
+          <div class="spacer-lg"></div>
+          <ul class="service-features fade-in-bullets">
+            <li><span class="icon">🎥</span> Cinematic highlight reels</li>
+            <li><span class="icon">🎞️</span> Emotional storytelling edits</li>
+            <li><span class="icon">📀</span> High-quality delivery to share & save</li>
+          </ul>
+        </div>
       </section>
     </div>
 
-    <div class="home-subsection-wrapper">
-      <section class="section home-subsection">
-        <h2>Real Wedding Moments</h2>
-        <div class="work-gallery">
+    <!-- About us -->
+    <div class="about-plain-section">
+      <p>Always On Events proudly serves the Greater Peoria area with professional videography, photography, and DJ services. We’re passionate about helping couples stay fully present and enjoy every moment of their big day without stress or distractions. From first look to final send-off, our team is here to ensure your celebration is captured, heard, and remembered.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div id="gallery" class="fullscreen-slideshow"></div>
+      <div class="fullscreen-slideshow">
+        <div class="fade-slide active">
           <img src="images/gallery1.jpg" alt="Wedding celebration">
-          <img src="images/gallery2.jpg" alt="Wedding dance">
-          <img src="images/gallery3.jpg" alt="Bride and groom">
         </div>
-      </section>
+        <div class="fade-slide">
+          <img src="images/gallery2.jpg" alt="Wedding dance">
+        </div>
+        <div class="fade-slide">
+          <img src="images/hero-bg.jpg" alt="Bride and groom">
+        </div>
+      </div>
     </div>
-
   </section>
 
+  <!-- Videos Section -->
   <section id="videos" class="section tab-section video-section">
     <h2>Video Showcase</h2>
     <p>Take a look at some highlights from past weddings and events we've brought to life.</p>
@@ -82,7 +145,6 @@
           Your browser does not support the video tag.
         </video>
       </div>
-      <!-- Add more videos like below if needed -->
       <div class="video-wrapper">
         <video controls>
           <source src="images/VSL.mov" type="video/quicktime">
@@ -92,6 +154,26 @@
     </div>
   </section>
 
+  <!-- Reviews Section -->
+  <section id="reviews" class="section reviews-section">
+    <h2>What Couples Are Saying</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>"Absolutely unforgettable! The music, the photos, the video — everything captured our day perfectly."</p>
+        <h4>— Sarah & Jason</h4>
+      </div>
+      <div class="review-card">
+        <p>"I was blown away by their professionalism and how relaxed they made us feel. Our guests are still talking about the DJ!"</p>
+        <h4>— Maya & Daniel</h4>
+      </div>
+      <div class="review-card">
+        <p>"We watch our wedding video at least once a month. It's so cinematic and emotional. Thank you On&On!"</p>
+        <h4>— Claire & Michael</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="section tab-section">
     <h2>Let's Connect</h2>
     <p>Fill out the form below and let's start planning your unforgettable event.</p>
@@ -121,17 +203,54 @@
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 On&On Weddings & Events | Creating Unforgettable Celebrations</p>
   </footer>
 
+  <!-- JS for tab switching -->
   <script>
+    function showSection(id) {
+        document.querySelectorAll('.tab-section').forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+      }
+
     function showSection(id) {
       document.querySelectorAll('.tab-section').forEach(section => {
         section.classList.remove('active');
       });
       document.getElementById(id).classList.add('active');
     }
+
+    //our services animations
+    function animateOnScroll() {
+      const bulletLists = document.querySelectorAll('.fade-in-bullets li:not(.animate), .slide-in-bullets li:not(.animate)');
+
+      bulletLists.forEach((item, index) => {
+        const rect = item.getBoundingClientRect();
+        const triggerPoint = window.innerHeight - 100;
+
+        if (rect.top < triggerPoint) {
+          setTimeout(() => {
+            item.classList.add('animate');
+          }, parseFloat(item.style.getPropertyValue('--delay') || '0') * 1000);
+        }
+      });
+    }
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Fullscreen fade slideshow
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.fullscreen-slideshow .fade-slide');
+    function showNextSlide() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add('active');
+    }
+    setInterval(showNextSlide, 4000); // every 4 seconds
   </script>
 
 </body>
