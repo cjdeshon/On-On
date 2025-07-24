@@ -683,6 +683,20 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-stack,
+  .about-plain-section,
+  .reviews-section {
+    margin: 0;
+    padding: 4rem 1rem;
+  }
+
   .main-nav-clean ul {
     flex-direction: column;
     gap: 1rem;
