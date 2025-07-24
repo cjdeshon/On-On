@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>On&On Weddings & Events</title>
   <link rel="icon" type="image/png" href="OnOn.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Lora&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -52,6 +52,15 @@
             <div class="card-content">
               <h3>Videography</h3>
               <p>Relive your wedding day through cinematic, story-driven video coverage.</p>
+            </div>
+          </div>
+
+          <div class="card cta-card">
+            <div class="icon-circle">💌</div>
+            <div class="card-content">
+              <h3>Let’s Make It Official</h3>
+              <p>We’d love to hear about your event. Let’s create something unforgettable together.</p>
+              <a href="#contact" class="btn-primary">Get in Touch</a>
             </div>
           </div>
         </div>
@@ -118,17 +127,15 @@
     </div>
 
     <!-- Gallery -->
-    <div id="gallery" class="fullscreen-slideshow"></div>
-      <div class="fullscreen-slideshow">
-        <div class="fade-slide active">
-          <img src="images/gallery1.jpg" alt="Wedding celebration">
-        </div>
-        <div class="fade-slide">
-          <img src="images/gallery2.jpg" alt="Wedding dance">
-        </div>
-        <div class="fade-slide">
-          <img src="images/hero-bg.jpg" alt="Bride and groom">
-        </div>
+    <div id="gallery" class="fullscreen-slideshow">
+      <div class="fade-slide active">
+        <img src="images/gallery1.jpg" alt="Wedding celebration">
+      </div>
+      <div class="fade-slide">
+        <img src="images/photography.jpg" alt="Wedding dance">
+      </div>
+      <div class="fade-slide">
+        <img src="images/hero-bg.jpg" alt="Bride and groom">
       </div>
     </div>
   </section>
@@ -155,7 +162,7 @@
   </section>
 
   <!-- Reviews Section -->
-  <section id="reviews" class="section reviews-section">
+  <section id="reviews" class="section tab-section section reviews-section">
     <h2>What Couples Are Saying</h2>
     <div class="reviews-grid">
       <div class="review-card">
@@ -242,15 +249,18 @@
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
 
-    // Fullscreen fade slideshow
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.fullscreen-slideshow .fade-slide');
-    function showNextSlide() {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add('active');
-    }
-    setInterval(showNextSlide, 4000); // every 4 seconds
+    //Gallery
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.fullscreen-slideshow .fade-slide');
+      let current = 0;
+
+      // Click handler to show next image
+      document.querySelector('.fullscreen-slideshow').addEventListener('click', () => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      });
+    });
   </script>
 
 </body>

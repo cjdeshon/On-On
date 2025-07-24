@@ -1,6 +1,6 @@
 
 :root {
-  --bg: #ffd5b0;
+  --bg: #f7f0e8;
   --text: #2b2b2b;
   --accent: #a97c50;
   --light: #ffffff;
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Lora', serif;
   font-size: 1.125rem; /* ~18px */
   line-height: 1.75;
   color: var(--text);
@@ -47,13 +47,6 @@ h1.site-title {
   font-size: 3.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-}
-
-.section h2 {
-  font-size: 2.25rem;
-  font-weight: 600;
-  color: #2c2c2c;
-  margin-bottom: 2rem;
 }
 
 .card-content h3 {
@@ -100,7 +93,7 @@ a {
 
 .hero-clean {
   background-color: #fffefc;
-  padding: 5rem 2rem 3rem;
+  padding: 2rem 3rem;
   text-align: center;
   border-bottom: 1px solid #eee;
 }
@@ -111,10 +104,10 @@ a {
 }
 
 .site-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   font-size: 3.5rem;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   letter-spacing: 0.5px;
 }
 
@@ -144,7 +137,7 @@ a {
 
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .btn-primary {
@@ -168,6 +161,7 @@ h1, h2, h3 {
 
 .section h2 {
   font-size: 2rem;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   text-align: center;
 }
@@ -192,6 +186,7 @@ h1, h2, h3 {
 
 .home-subsection p {
   margin-bottom: 1.25rem;
+  color: #333;
   max-width: 800px;
   line-height: 1.8;
   font-size: 1.05rem;
@@ -207,16 +202,49 @@ h1, h2, h3 {
   margin-top: 6rem;
 }
 
+/* Lets Make it official */
+.cta-card {
+  background-color: var(--accent);
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-card .icon-circle {
+  background: white;
+  color: var(--accent);
+}
+
+.cta-card h3,
+.cta-card p {
+  color: white;
+}
+
+.cta-card p {
+  padding-bottom: 1rem;
+}
+
+.cta-card .btn-primary {
+  background: #fff;
+  color: var(--accent);
+}
+
+.cta-card .btn-primary:hover {
+  background: #f1e0d0;
+}
+/*end*/
+
 /*--- Our Services ---*/
 .services-heading {
   text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
 }
 
 .services-heading h2 {
   font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   color: var(--text);
 }
 
@@ -233,8 +261,7 @@ h1, h2, h3 {
 }
 
 .service-image {
-  flex: 1;
-
+  flex: 1 1 50%;
   background-size: cover;
   background-position: center;
   min-height: 600px; /* Match height for visual balance */
@@ -266,9 +293,7 @@ h1, h2, h3 {
 
 /*--- Services ---*/
 .service-content {
-  flex: 1 1 600px;
-  padding: 3rem 2rem;
-  max-width: 600px;
+  flex: 1 1 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -302,7 +327,7 @@ h1, h2, h3 {
   justify-content: center;
   width: 70px;
   height: 70px;
-  background: #cfb288;
+  background: #eac197;
   color: #fff;
   border-radius: 50%;
   font-size: 2.5rem;
@@ -483,8 +508,6 @@ h1, h2, h3 {
 
 .fullscreen-slideshow .fade-slide {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -516,6 +539,11 @@ h1, h2, h3 {
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
   z-index: 0;
+}
+
+#videos p {
+  text-align: center;
+  color: #ffffff;
 }
 
 .video-section h2,
@@ -583,6 +611,14 @@ h1, h2, h3 {
   font-weight: 600;
   color: var(--accent);
   margin: 0;
+}
+
+#contact h2 {
+  color: var(--text); /* makes it dark text */
+}
+
+#contact p {
+  text-align: center;
 }
 
 .contact-form {
