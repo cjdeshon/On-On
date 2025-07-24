@@ -684,11 +684,19 @@ footer {
 
 @media (max-width: 768px) {
     header {
-      flex-direction: column;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+    .header-left,
+    .header-right {
+      margin: 10px 0;
     }
 
     .main-nav-clean {
-      position: sticky;
       top: 0;
       z-index: 1000;
       background-color: white;
