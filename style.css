@@ -683,6 +683,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+    nav ul {
+      flex-direction: column;
+    }
+
     /* Stack nav links vertically */
     .main-nav-clean ul {
       flex-direction: column;
