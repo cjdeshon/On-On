@@ -686,49 +686,18 @@ footer {
     header {
       flex-direction: column;
     }
-    nav ul {
-      flex-direction: column;
+
+    .main-nav-clean {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional soft shadow */
     }
 
-    /* Stack nav links vertically */
-    .main-nav-clean ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    /* Smaller title for mobile */
-    h1.site-title {
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    /* Stack service section layout */
-    .split-service-section {
-      flex-direction: column;
-      min-height: auto;
-    }
-
-    .service-image,
-    .service-content {
-      flex: 1 1 100%;
-      min-height: 300px;
-    }
-
-    /* Reduce padding */
-    .section {
-      padding: 2rem 1rem;
-    }
-
-    /* Make contact button centered */
-    .contact-form button {
-      align-self: center;
-    }
-
-    /* Full-width images and video */
-    .video-wrapper video,
-    .fullscreen-slideshow img {
-      width: 100%;
-      height: auto;
+     #home,
+    .hero-clean {
+      padding-top: 80px; /* adjust to match nav height */
     }
   }
