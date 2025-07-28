@@ -720,11 +720,6 @@ footer {
     }
 
     body {
-      padding-top: 140px;
-    }
-
-     #home,
-    .hero-clean {
-      padding-top: 20px; /* adjust to match nav height */
+      padding-top: 100px;
     }
   }
