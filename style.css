@@ -30,6 +30,7 @@ body {
   line-height: 1.75;
   color: var(--text);
   background-color: var(--bg);
+  padding-top: 120px; /* room for sticky nav + hero */
 }
 
 .section p,
@@ -111,29 +112,38 @@ a {
   letter-spacing: 0.5px;
 }
 
-.main-nav-clean ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 0;
-  margin: 0;
-}
+    /* Sticky Navigation (adapted from CDSoftware) */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
 
-.main-nav-clean a {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #666;
-  letter-spacing: 1px;
-  transition: color 0.2s ease-in-out;
-}
+  .sticky-nav nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
 
-.main-nav-clean a:hover {
-  color: var(--accent);
-}
+  .sticky-nav nav ul li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #444;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
 
+  .sticky-nav nav ul li a:hover {
+    color: var(--accent);
+  }
 
 
 h1, h2, h3 {
@@ -696,12 +706,28 @@ footer {
       margin: 10px 0;
     }
 
-    .main-nav-clean {
+    /* .main-nav-clean {
       top: 0;
       z-index: 1000;
       background-color: white;
       padding: 1rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* optional soft shadow */
+    /* } */
+
+
+
+  /* On mobile, center stack */
+    .sticky-nav nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sticky-nav nav ul li {
+      margin: 10px 0;
+    }
+
+    body {
+      padding-top: 140px;
     }
 
      #home,
