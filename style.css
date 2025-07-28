@@ -695,7 +695,7 @@ footer {
 @media (max-width: 768px) {
     header {
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: space-between;
         top: 0;
         z-index: 1000;
